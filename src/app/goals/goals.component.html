@@ -1,0 +1,10 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let goal of goals" (click)="onSelect(goal)" [class.selected]="goal === selectedGoal">
+    <span class="badge">{{goal.id}}</span> {{goal.title}}
+  </li>
+</ul>
+
+<app-goal-detail [goal]="selectedGoal"></app-goal-detail>
+
+
