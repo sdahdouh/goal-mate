@@ -8,13 +8,15 @@ import {FormsModule} from '@angular/forms';
 import { GoalDetailComponent } from './goal-detail/goal-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import {RouterModule} from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GoalsComponent,
     GoalDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,7 @@ import {GoalService} from '../services/goal.service';
 export class GoalsComponent implements OnInit {
 
   goals: Goal[];
-  selectedGoal: Goal;
+
 
   constructor(private goalService: GoalService) {
   }
@@ -20,16 +20,10 @@ export class GoalsComponent implements OnInit {
     this.getGoals();
   }
 
-  onSelect(goal: Goal): void {
-    if (goal === this.selectedGoal) {
-      this.selectedGoal = null;
-    } else {
-      this.selectedGoal = goal;
-    }
-  }
+
 
   getGoals(): void {
-    this.goalService.getGoals().subscribe(wassermelone => this.goals = wassermelone);
+    this.goalService.getGoals().subscribe(goal => this.goals = goal);
   }
 
 }

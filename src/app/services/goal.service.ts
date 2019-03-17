@@ -13,7 +13,12 @@ export class GoalService {
   }
 
   getGoals(): Observable<Goal[]> {
-    this.messageService.addMessage('GoalService: fetched Goals!')
+    this.messageService.addMessage('GoalService: fetched Goals!');
     return of(GOALS);
+  }
+
+  getGoal(id: number): Observable<Goal> {
+    this.messageService.addMessage('GoalService: fetched Goal id=${id}');
+    return of(GOALS.find(goal => goal.id === id));
   }
 }
